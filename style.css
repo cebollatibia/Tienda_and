@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  @import url('noot');
+  font-family: 'Noot', font-family;
+  background-color: #e09dd2;
+  color: #3f1b3b;
+}
+header {
+  background-color: #b94178;
+  color: #000000;
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+ 
+
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  border-radius: 250%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+#inicio {
+  text-align: center;
+  padding: 2rem;
+}
+
+#inicio video {
+  width: 20%;
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#entrar {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #d628b0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fcfcfc;
+}
+#regresar {
+  margin-bottom: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #d628b0;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#regresar:hover {
+  background-color: #a11e85;
+}
+#tienda {
+  padding: 2rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+nav button {
+  padding: 0.5rem 1rem;
+  background-color: #e3b1c9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.carrito {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1rem;
+}
+
+.producto {
+  background-color: #fff;
+  border: 1px solid #e3b1c9;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+.producto img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.oculto {
+  display: none;
+}
+#carrito-modal {
+  position: fixed;
+  top: 10%;
+  left: 25%;
+  width: 50%;
+  background-color: #fff;
+  border: 2px solid #b94178;
+  padding: 1rem;
+  border-radius: 12px;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+footer {
+  background-color: #b94178;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+.redes-sociales {
+  margin-top: 0.5rem;
+}
+
+.redes-sociales a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.redes-sociales img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s;
+}
+
+.redes-sociales img:hover {
+  transform: scale(1.1);
+}
+
