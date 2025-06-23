@@ -1,16 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 body {
   margin: 0;
-  @import url('noot');
-  font-family: 'Noot', font-family;
+  font-family: Arial, sans-serif;
   background-color: #e09dd2;
   color: #3f1b3b;
 }
+
 header {
   background-color: #b94178;
-  color: #000000;
+  color: #fff;
   padding: 1rem;
   text-align: center;
-  font-size: 2rem;
 }
 
 .logo-container {
@@ -18,16 +19,28 @@ header {
   align-items: center;
   justify-content: center;
   gap: 1rem;
- 
-
 }
 
 .logo {
   height: 100px;
-  width: auto;
-  border-radius: 250%;
+  border-radius: 50%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  background: linear-gradient(90deg, #000000);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: brillo 3s infinite linear;
+}
+
+@keyframes brillo {
+  0% { background-position: 0% }
+  100% { background-position: 200% }
+}
+
 #inicio {
   text-align: center;
   padding: 2rem;
@@ -37,8 +50,14 @@ header {
   width: 20%;
   margin: 1rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: aparecer 0.6s ease-in-out;
+  transition: transform 0.3s;
 }
+
+#inicio video:hover {
+  transform: scale(1.05);
+}
+
 #entrar {
   padding: 1rem 2rem;
   font-size: 1.2rem;
@@ -48,6 +67,7 @@ header {
   cursor: pointer;
   color: #fcfcfc;
 }
+
 #regresar {
   margin-bottom: 1rem;
   padding: 0.7rem 1.5rem;
@@ -61,10 +81,7 @@ header {
 }
 
 #regresar:hover {
-  background-color: #a11e85;
-}
-#tienda {
-  padding: 2rem;
+  background-color: #a11e85;
 }
 
 nav {
@@ -73,6 +90,7 @@ nav {
   margin-bottom: 1rem;
   align-items: center;
 }
+
 nav button {
   padding: 0.5rem 1rem;
   background-color: #e3b1c9;
@@ -95,12 +113,19 @@ nav button {
 }
 
 .producto {
-  background-color: #fff;
-  border: 1px solid #e3b1c9;
+  background-color: #ffe7f5;
+  border: 2px solid #d479b2;
   padding: 1rem;
   border-radius: 10px;
   text-align: center;
+  animation: aparecer 0.6s ease-in-out;
+  transition: transform 0.3s;
 }
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
 .producto img {
   width: 150px;
   height: 200px;
@@ -109,21 +134,66 @@ nav button {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.oculto {
-  display: none;
+.producto select {
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+  border: 1px solid #c471aa;
+  border-radius: 6px;
+  background-color: #fce1f1;
+  color: #3f1b3b;
+  font-weight: bold;
 }
+
+.producto button {
+  margin-top: 0.5rem;
+  background-color: #d628b0;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.producto button:hover {
+  background-color: #a11e85;
+}
+
 #carrito-modal {
   position: fixed;
-  top: 10%;
-  left: 25%;
-  width: 50%;
-  background-color: #fff;
-  border: 2px solid #b94178;
+  top: 1rem;
+  right: 1rem;
+  width: 300px;
+  background-color: #fff0fa;
+  border: 2px solid #d628b0;
   padding: 1rem;
   border-radius: 12px;
-  z-index: 10;
+  z-index: 100;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-height: 80vh;
+  overflow-y: auto;
 }
+
+#carrito-modal h2 {
+  color: #b94178;
+  font-size: 1.5rem;
+}
+
+#carrito-modal button {
+  background-color: #d628b0;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#carrito-modal button:hover {
+  background-color: #a11e85;
+}
+
 footer {
   background-color: #b94178;
   color: #fff;
@@ -149,5 +219,20 @@ footer {
 
 .redes-sociales img:hover {
   transform: scale(1.1);
+}
+
+.oculto {
+  display: none;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
