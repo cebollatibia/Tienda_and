@@ -1,44 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
-  <header>
-  <div class="logo-container">
-    <img src="img/log.jpg" alt="Logo Bratz" class="logo" />
-  </div>
-</header>
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BRATZ BOUTIQUE</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header><h1>BRATZ BOUTIQUE</h1></header>
-<section id="inicio">
-  <video src="bratz.mp4" width="80" height="450" controls></video>
-  <video src="tienda.mp4" width="80" height="450" controls></video>
-  <video src="que_bonita.mp4" width="80" height="450" controls></video>
+  <header>
+    <div class="logo-container">
+      <img src="img/log.jpg" alt="Logo Bratz" class="logo" />
+      <h1>BRATZ BOUTIQUE</h1>
+    </div>
+  </header>
 
-  <button id="entrar">Entrar a la Tienda</button>
-
-  <script>
-    // Obtener todos los videos dentro de la sección
-    const videos = document.querySelectorAll('#inicio video');
-
-    // Cuando un video se reproduce
-    videos.forEach(video => {
-      video.addEventListener('play', () => {
-        // Pausar todos los demás
-        videos.forEach(otherVideo => {
-          if (otherVideo !== video) {
-            otherVideo.pause();
-          }
-        });
-      });
-    });
-  </script>
-</section>
-
+  <section id="inicio">
+    <video src="bratz.mp4" controls></video>
+    <video src="tienda.mp4" controls></video>
+    <video src="que_bonita.mp4" controls></video>
+    <button id="entrar">Entrar a la Tienda</button>
+  </section>
 
   <section id="tienda" class="oculto">
     <nav>
@@ -48,12 +30,10 @@
       <button onclick="filtrar('accesorios')">Accesorios</button>
       <button onclick="filtrar('zapatos')">Zapatos</button>
       <button onclick="filtrar('pantalones')">Pantalones</button>
-   
       <div class="carrito">
         <span id="carrito-contador">0</span>
         <button onclick="verCarrito()">🛒 Ver Carrito</button>
-<button id="regresar">🔙 Volver al Inicio</button>
-
+        <button id="regresar">🔙 Volver al Inicio</button>
       </div>
     </nav>
     <div id="productos"></div>
@@ -65,17 +45,16 @@
     <button onclick="cerrarCarrito()">Cerrar</button>
   </section>
 
-  <script src="script.js"></script>
+  <footer>
+    <p>Síguenos en nuestras redes:</p>
+    <div class="redes-sociales">
+      <a href="https://www.instagram.com/bratzamealco" target="_blank">
+        <img src="img/instagram.jpg" alt="Instagram" />
+      </a>
+      <a href="https://www.facebook.com/share/1E1CZhurdB" target="_blank">
+        <img src="img/faceboock.jpg" alt="Facebook" />
+      </a>
+    </div>
+  </footer>
 </body>
-<footer>
-  <p>Síguenos en nuestras redes:</p>
-  <div class="redes-sociales">
-    <a href="https://www.instagram.com/bratzamealco?igsh=MW5sM2E5bDFnajJjZQ==.com" target="_blank">
-      <img src="img/instagram.jpg" alt="Instagram" />
-    </a>
-    <a href="https://www.facebook.com/share/1E1CZhurdB/?mibextid=wwXIfr.com" target="_blank">
-      <img src="img/faceboock.jpg" alt="Facebook" />
-    </a>
-  </div>
-</footer>
 </html>
