@@ -20,6 +20,22 @@
     <video src="tienda.mp4" controls></video>
     <video src="que_bonita.mp4" controls></video>
     <button id="entrar">Entrar a la Tienda</button>
+     <script>
+    // Obtener todos los videos dentro de la sección
+    const videos = document.querySelectorAll('#inicio video');
+
+    // Cuando un video se reproduce
+    videos.forEach(video => {
+      video.addEventListener('play', () => {
+        // Pausar todos los demás
+        videos.forEach(otherVideo => {
+          if (otherVideo !== video) {
+            otherVideo.pause();
+          }
+        });
+      });
+    });
+  </script>
   </section>
 
   <section id="tienda" class="oculto">
@@ -58,3 +74,4 @@
   </footer>
 </body>
 </html>
+
